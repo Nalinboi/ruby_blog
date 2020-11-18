@@ -2191,3 +2191,32 @@ Entrypoint application = js/application-8de6a58a0c378aa9441e.js js/application-8
 Completed 200 OK in 5758ms (Views: 5751.1ms | ActiveRecord: 0.7ms | Allocations: 12658)
 
 
+Started GET "/articles" for ::1 at 2020-11-18 17:18:33 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1038)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/nalinaswani/Documents/GitHub/ruby_blog/public/packs
+[Webpacker] Hash: 0a40d1e389138fc742bd
+Version: webpack 4.44.2
+Time: 2413ms
+Built at: 18/11/2020 5:18:37 pm
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-d7dad37371cd1cc1db94.js    676 KiB  application  [emitted] [immutable]  application
+js/application-d7dad37371cd1cc1db94.js.map    788 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-d7dad37371cd1cc1db94.js js/application-d7dad37371cd1cc1db94.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 807 bytes {application} [built]
+[./app/javascript/stylesheets/application.scss] 664 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/stylesheets/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/stylesheets/application.scss 315 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 8 hidden modules
+
+Completed 200 OK in 4626ms (Views: 4624.8ms | ActiveRecord: 0.3ms | Allocations: 6048)
+
+
