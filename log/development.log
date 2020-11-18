@@ -2274,3 +2274,330 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.6ms | Allocations: 5312)
 
 
+Started GET "/articles/new" for ::1 at 2020-11-19 09:30:54 +1300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 505)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms | Allocations: 4389)
+
+
+Started POST "/articles" for ::1 at 2020-11-19 09:34:36 +1300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"NVkmPIVD2YEct2R1cGa35cIRNZOif9gFrZFwQVyTJrFc9oCNoCpW/8VtlQb63uDR4IDbICAgphcEN6hr65NMdg==", "article"=>{"title"=>"dd", "text"=>"sdf"}, "commit"=>"Save Article"}
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms | Allocations: 1186)
+
+
+Started GET "/articles" for ::1 at 2020-11-19 09:34:36 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1041)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.4ms | Allocations: 4929)
+
+
+Started POST "/articles" for ::1 at 2020-11-19 09:34:43 +1300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"NVkmPIVD2YEct2R1cGa35cIRNZOif9gFrZFwQVyTJrFc9oCNoCpW/8VtlQb63uDR4IDbICAgphcEN6hr65NMdg==", "article"=>{"title"=>"dd", "text"=>"sdf"}, "commit"=>"Save Article"}
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 1203)
+
+
+Started GET "/articles" for ::1 at 2020-11-19 09:34:43 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1032)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.1ms | Allocations: 4925)
+
+
+Started POST "/articles" for ::1 at 2020-11-19 09:34:52 +1300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"NVkmPIVD2YEct2R1cGa35cIRNZOif9gFrZFwQVyTJrFc9oCNoCpW/8VtlQb63uDR4IDbICAgphcEN6hr65NMdg==", "article"=>{"title"=>"This is more than 10", "text"=>"sdf"}, "commit"=>"Save Article"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:16:in `create'
+  [1m[36mArticle Create (2.9ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "This is more than 10"], ["text", "sdf"], ["created_at", "2020-11-18 20:34:52.099374"], ["updated_at", "2020-11-18 20:34:52.099374"]]
+  ↳ app/controllers/articles_controller.rb:16:in `create'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:16:in `create'
+Redirected to http://localhost:3000/articles/11
+Completed 302 Found in 12ms (ActiveRecord: 4.4ms | Allocations: 2692)
+
+
+Started GET "/articles/11" for ::1 at 2020-11-19 09:34:52 +1300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 172)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 6.8ms | ActiveRecord: 0.2ms | Allocations: 7233)
+
+
+Started POST "/articles" for ::1 at 2020-11-19 09:35:04 +1300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"NVkmPIVD2YEct2R1cGa35cIRNZOif9gFrZFwQVyTJrFc9oCNoCpW/8VtlQb63uDR4IDbICAgphcEN6hr65NMdg==", "article"=>{"title"=>"<5", "text"=>"sdf"}, "commit"=>"Save Article"}
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 1212)
+
+
+Started GET "/articles" for ::1 at 2020-11-19 09:35:04 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1075)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.1ms | Allocations: 4957)
+
+
+Started GET "/articles/2" for ::1 at 2020-11-19 09:35:11 +1300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 41)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.1ms | Allocations: 4467)
+
+
+Started GET "/articles/7" for ::1 at 2020-11-19 09:35:15 +1300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mArticle Load (1.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 41)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 6.3ms | ActiveRecord: 1.4ms | Allocations: 4448)
+
+
+Started GET "/articles" for ::1 at 2020-11-19 09:39:38 +1300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 3918)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 0.6ms | Allocations: 8321)
+
+
+Started GET "/articles/new" for ::1 at 2020-11-19 09:39:50 +1300
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 756)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 4648)
+
+
+Started POST "/articles" for ::1 at 2020-11-19 09:39:59 +1300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"bivF1V2nIyS1x8TdWufMcOoX92hdevHYduQqioEM154HhGNkeM6sWmwdNa7QX5tEyIYZ298lj8rfQvKgNgy9WQ==", "article"=>{"title"=>"yup", "text"=>"haha"}, "commit"=>"Save Article"}
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 682)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 5396)
+
+
+Started POST "/articles" for ::1 at 2020-11-19 09:40:00 +1300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"lOeOlfgmDWEVmXytaDWHAZw6NIH4sfelU1fxry4DZHP9SCgk3U+CH8xDjd7ijdA1vqvaMnruibf68SmFmQMOtA==", "article"=>{"title"=>"yup", "text"=>"haha"}, "commit"=>"Save Article"}
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 678)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 5340)
+
+
+Started POST "/articles" for ::1 at 2020-11-19 09:40:01 +1300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"cCch2m+neRuUZDNw/6Ui7MPxMjtpzc6ksrEZPI92eUgZiIdrSs72ZU2+wgN1HXXY4WDciOuSsLYbF8EWOHYTjw==", "article"=>{"title"=>"yup", "text"=>"haha"}, "commit"=>"Save Article"}
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 678)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 5355)
+
+
+Started POST "/articles" for ::1 at 2020-11-19 09:40:02 +1300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"PyGFKFBHZninP/XYSw0pTtYLJbDyjlwI7h8yT7hHTKVWjiOZdS7pBn7lBKvBtX569JrLA3DRIhpHueplD0cmYg==", "article"=>{"title"=>"yup", "text"=>"haha"}, "commit"=>"Save Article"}
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 678)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 5349)
+
+
+Started POST "/articles" for ::1 at 2020-11-19 09:40:02 +1300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"2jgt7wWTc1jFqlEHFnQs3v591h1jBd43f9dHEvqx5K+zl4teIPr8JhxwoHSczHvq3Ow4ruFaoCXWcZ84TbGOaA==", "article"=>{"title"=>"yup", "text"=>"haha"}, "commit"=>"Save Article"}
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 678)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 5344)
+
+
+Started POST "/articles" for ::1 at 2020-11-19 09:40:02 +1300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"Mi+ZZeCabXidmgk+lRDn+hxYcyPb/sBaEE9bY/iSB89bgD/UxfPiBkRA+E0fqLDOPsmdkFmhvki56YNJT5JtCA==", "article"=>{"title"=>"yup", "text"=>"haha"}, "commit"=>"Save Article"}
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 678)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 5358)
+
+
+Started POST "/articles" for ::1 at 2020-11-19 09:40:03 +1300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"XTNzHrRECg1NtB59S42ZfXyaBp8/dieIc30fPAGWjj80nNWvkS2Fc5Ru7w7BNc5JXgvoLL0pWZra28cWtpbk+A==", "article"=>{"title"=>"yup", "text"=>"haha"}, "commit"=>"Save Article"}
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 678)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 5346)
+
+
+Started POST "/articles" for ::1 at 2020-11-19 09:40:03 +1300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"JgYnURzReUGJ1LcXc6BXkCVTehc8uW9DYOQXj8ODcBhPqYHgObj2P1AORmT5GACkB8KUpL7mEVHJQs+ldIMa3w==", "article"=>{"title"=>"yup", "text"=>"haha"}, "commit"=>"Save Article"}
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 678)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 5348)
+
+
+Started POST "/articles" for ::1 at 2020-11-19 09:40:06 +1300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"3GB6scBeTjzzXgtCeqLrEn0fuiD5t1l7l1HBd21zwOu1z9wA5TfBQiqE+jHwGrwmX45Uk3voJ2k+9xld2nOqLA==", "article"=>{"title"=>"yupddd", "text"=>"haha"}, "commit"=>"Save Article"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:17:in `create'
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "yupddd"], ["text", "haha"], ["created_at", "2020-11-18 20:40:06.723614"], ["updated_at", "2020-11-18 20:40:06.723614"]]
+  ↳ app/controllers/articles_controller.rb:17:in `create'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:17:in `create'
+Redirected to http://localhost:3000/articles/12
+Completed 302 Found in 6ms (ActiveRecord: 1.7ms | Allocations: 2635)
+
+
+Started GET "/articles/12" for ::1 at 2020-11-19 09:40:06 +1300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 41)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.1ms | Allocations: 4567)
+
+
+Started GET "/articles" for ::1 at 2020-11-19 09:40:08 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1106)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.1ms | Allocations: 4995)
+
+
+Started GET "/articles" for ::1 at 2020-11-19 09:42:30 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1281)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.1ms | Allocations: 6071)
+
+
+Started GET "/articles/new" for ::1 at 2020-11-19 09:42:36 +1300
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 990)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 5014)
+
+
+Started POST "/articles" for ::1 at 2020-11-19 09:42:46 +1300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"TedsWqmBRO6H70uiUG+tjZcNn7igb8eY6s7sIPuGiJAkSMrrjOjLkF41utHa1/q5tZxxCyIwuYpDaDQKTIbiVw==", "article"=>{"title"=>"f", "text"=>"pay respect"}, "commit"=>"Save Article"}
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 825)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 5499)
+
+
+Started POST "/articles" for ::1 at 2020-11-19 09:42:49 +1300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"MsxCLxB7TOOI1c9RgbvSSFdY5cMmRoAQUjwyOl2VrNRbY+SeNRLDnVEPPiILA4V8dckLcKQZ/gL7muoQ6pXGEw==", "article"=>{"title"=>"f", "text"=>"pay respect"}, "commit"=>"Save Article"}
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 818)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 5479)
+
+
+Started POST "/articles" for ::1 at 2020-11-19 09:42:50 +1300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"7ApHTwVPvdtRjPTmvu1VJhpbWpJ1fh6zyGtuE/bH7lCFpeH+ICYypYhWBZU0VQISOMq0IfchYKFhzbY5QceElw==", "article"=>{"title"=>"f", "text"=>"pay respect"}, "commit"=>"Save Article"}
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 818)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 5484)
+
+
+Started POST "/articles" for ::1 at 2020-11-19 09:42:53 +1300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"uAd7PObpeJa2SIAIgxv0o5zly93PeX4c0SG3YhdmFJzRqN2Nw4D36G+ScXsJo6OXvnQlbk0mAA54h29IoGZ+Ww==", "article"=>{"title"=>"f", "text"=>"pay respect df"}, "commit"=>"Save Article"}
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 818)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 5494)
+
+
+Started POST "/articles" for ::1 at 2020-11-19 09:43:07 +1300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"5noTwY0Mgi8KgyXqE2P4s350CzJzUrqcJG//S6eap0mP1bVwqGUNUdNZ1JmZ26+HXOXlgfENxI6NySdhEJrNjg==", "article"=>{"title"=>"Let go", "text"=>"pay respect df"}, "commit"=>"Save Article"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:17:in `create'
+  [1m[36mArticle Create (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Let go"], ["text", "pay respect df"], ["created_at", "2020-11-18 20:43:07.497284"], ["updated_at", "2020-11-18 20:43:07.497284"]]
+  ↳ app/controllers/articles_controller.rb:17:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:17:in `create'
+Redirected to http://localhost:3000/articles/13
+Completed 302 Found in 7ms (ActiveRecord: 1.5ms | Allocations: 2602)
+
+
+Started GET "/articles/13" for ::1 at 2020-11-19 09:43:07 +1300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 165)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.1ms | Allocations: 4713)
+
+
+Started GET "/articles" for ::1 at 2020-11-19 09:43:09 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1148)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.2ms | Allocations: 5041)
+
+
+Started GET "/articles/new" for ::1 at 2020-11-19 09:43:18 +1300
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 669)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 4563)
+
+
