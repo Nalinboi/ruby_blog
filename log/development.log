@@ -2034,3 +2034,160 @@ Processing by ArticlesController#new as HTML
 Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 4695)
 
 
+Started GET "/articles" for ::1 at 2020-11-18 17:13:08 +1300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 4357)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/nalinaswani/Documents/GitHub/ruby_blog/public/packs
+[Webpacker] Hash: b44752968732ad4a755a
+Version: webpack 4.44.2
+Time: 2624ms
+Built at: 18/11/2020 5:13:13 pm
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-359d828fdf771315918b.js    433 KiB  application  [emitted] [immutable]  application
+js/application-359d828fdf771315918b.js.map    506 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-359d828fdf771315918b.js js/application-359d828fdf771315918b.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 4 hidden modules
+
+Completed 200 OK in 4608ms (Views: 4599.4ms | ActiveRecord: 1.3ms | Allocations: 13735)
+
+
+Started GET "/articles" for ::1 at 2020-11-18 17:13:49 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1035)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: d424c91a1eacca98ee17
+Version: webpack 4.44.2
+Time: 2305ms
+Built at: 18/11/2020 5:13:53 pm
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-b7afd81d65ecc539140e.js    663 KiB  application  [emitted] [immutable]  application
+js/application-b7afd81d65ecc539140e.js.map    776 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-b7afd81d65ecc539140e.js js/application-b7afd81d65ecc539140e.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 807 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 6 hidden modules
+
+ERROR in ./app/javascript/packs/application.js
+Module not found: Error: Can't resolve '../stylesheets/application' in '/Users/nalinaswani/Documents/GitHub/ruby_blog/app/javascript/packs'
+ @ ./app/javascript/packs/application.js 14:0-36
+
+Completed 200 OK in 4421ms (Views: 4420.3ms | ActiveRecord: 0.1ms | Allocations: 5962)
+
+
+Started GET "/articles" for ::1 at 2020-11-18 17:13:55 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1030)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.1ms | Allocations: 4924)
+
+
+Started GET "/articles" for ::1 at 2020-11-18 17:17:48 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1030)
+[Webpacker] Compiling...
+Started GET "/articles/new" for ::1 at 2020-11-18 17:17:52 +1300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 29.3ms | Allocations: 4069)
+[Webpacker] Compiling...
+Started GET "/articles/1" for ::1 at 2020-11-18 17:17:54 +1300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 172)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/nalinaswani/Documents/GitHub/ruby_blog/public/packs
+[Webpacker] Hash: e47fd4747766037cad28
+Version: webpack 4.44.2
+Time: 4399ms
+Built at: 18/11/2020 5:17:55 pm
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-8de6a58a0c378aa9441e.js   1.31 MiB  application  [emitted] [immutable]  application
+js/application-8de6a58a0c378aa9441e.js.map   1.45 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-8de6a58a0c378aa9441e.js js/application-8de6a58a0c378aa9441e.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 807 bytes {application} [built]
+[./app/javascript/stylesheets/application.scss] 664 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/stylesheets/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/stylesheets/application.scss 670 KiB {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 8 hidden modules
+
+Completed 200 OK in 7118ms (Views: 7116.6ms | ActiveRecord: 1.2ms | Allocations: 22538)
+
+
+[Webpacker] Compiled all packs in /Users/nalinaswani/Documents/GitHub/ruby_blog/public/packs
+[Webpacker] Hash: e47fd4747766037cad28
+Version: webpack 4.44.2
+Time: 3851ms
+Built at: 18/11/2020 5:17:58 pm
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-8de6a58a0c378aa9441e.js   1.31 MiB  application  [emitted] [immutable]  application
+js/application-8de6a58a0c378aa9441e.js.map   1.45 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-8de6a58a0c378aa9441e.js js/application-8de6a58a0c378aa9441e.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 807 bytes {application} [built]
+[./app/javascript/stylesheets/application.scss] 664 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/stylesheets/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/stylesheets/application.scss 670 KiB {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 8 hidden modules
+
+Completed 200 OK in 6039ms (Views: 6037.9ms | ActiveRecord: 0.0ms | Allocations: 19086)
+
+
+[Webpacker] Compiled all packs in /Users/nalinaswani/Documents/GitHub/ruby_blog/public/packs
+[Webpacker] Hash: e47fd4747766037cad28
+Version: webpack 4.44.2
+Time: 3215ms
+Built at: 18/11/2020 5:17:59 pm
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-8de6a58a0c378aa9441e.js   1.31 MiB  application  [emitted] [immutable]  application
+js/application-8de6a58a0c378aa9441e.js.map   1.45 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-8de6a58a0c378aa9441e.js js/application-8de6a58a0c378aa9441e.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 807 bytes {application} [built]
+[./app/javascript/stylesheets/application.scss] 664 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/stylesheets/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/stylesheets/application.scss 670 KiB {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 8 hidden modules
+
+Completed 200 OK in 5758ms (Views: 5751.1ms | ActiveRecord: 0.7ms | Allocations: 12658)
+
+
