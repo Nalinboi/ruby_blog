@@ -3,6 +3,7 @@
 
 $white: white;
 $black: black;
+$purple: purple;
 
 .navbar {
         margin-bottom: 0;
@@ -19,10 +20,10 @@ h2 {
 }
 p {
         font-size: 16px;
-        color: $white;
+        color: $purple;
 }
 a:visited {
-        color: $black;
+        color: $purple;
 }
 .jumbotron {
         background: #0048CD;

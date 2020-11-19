@@ -2765,3 +2765,797 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.4ms | Allocations: 6463)
 
 
+Started GET "/articles/1/edit" for ::1 at 2020-11-19 10:04:17 +1300
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:15:in `edit'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1094)
+Started GET "/articles/1/edit" for ::1 at 2020-11-19 10:04:17 +1300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:15:in `edit'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (Duration: 1.1ms | Allocations: 746)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 21.2ms | ActiveRecord: 0.2ms | Allocations: 12069)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.1ms | Allocations: 8558)
+
+
+Started PATCH "/articles/1" for ::1 at 2020-11-19 10:04:34 +1300
+Processing by ArticlesController#update as HTML
+  Parameters: {"authenticity_token"=>"welF81G7tfXw4QpdqLljvdo304QjItCvCkOddDN7zzerY3KTTZrsgSDLvShx8r201u1Oc8XBbgPUuxFZhBYJ5g==", "article"=>{"title"=>"Nalin ", "text"=>"dksjfklasdjflj"}, "commit"=>"Update Article", "id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:29:in `update'
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:31:in `update'
+  [1m[36mArticle Update (6.0ms)[0m  [1m[33mUPDATE "articles" SET "text" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["text", "dksjfklasdjflj"], ["updated_at", "2020-11-18 21:04:34.681460"], ["id", 1]]
+  ↳ app/controllers/articles_controller.rb:31:in `update'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:31:in `update'
+Redirected to http://localhost:3000/articles/1
+Completed 302 Found in 14ms (ActiveRecord: 7.6ms | Allocations: 3391)
+
+
+Started GET "/articles/1" for ::1 at 2020-11-19 10:04:34 +1300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 165)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.1ms | Allocations: 4708)
+
+
+Started GET "/articles" for ::1 at 2020-11-19 10:04:42 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1477)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.2ms | Allocations: 5369)
+
+
+Started GET "/articles/4" for ::1 at 2020-11-19 10:05:59 +1300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 207)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.1ms | Allocations: 5519)
+
+
+Started GET "/articles/3" for ::1 at 2020-11-19 10:06:04 +1300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 72)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 0.2ms | Allocations: 4474)
+
+
+Started GET "/articles/3/edit" for ::1 at 2020-11-19 10:06:07 +1300
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:15:in `edit'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1069)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.1ms | Allocations: 5627)
+
+
+Started GET "/articles/new" for ::1 at 2020-11-19 10:25:02 +1300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 2.3ms | Allocations: 1072)
+  Rendered articles/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1396)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 17.4ms | ActiveRecord: 0.0ms | Allocations: 9051)
+
+
+Started GET "/articles/2/edit" for ::1 at 2020-11-19 10:25:44 +1300
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:25:in `edit'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 2.3ms | Allocations: 1032)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1351)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 11.1ms | ActiveRecord: 0.2ms | Allocations: 6811)
+
+
+Started GET "/articles" for ::1 at 2020-11-19 10:25:54 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1663)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.2ms | Allocations: 5682)
+
+
+Started GET "/articles" for ::1 at 2020-11-19 10:26:58 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1459)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/nalinaswani/Documents/GitHub/ruby_blog/public/packs
+[Webpacker] Hash: 71871ae99f5d80e926e9
+Version: webpack 4.44.2
+Time: 3327ms
+Built at: 19/11/2020 10:27:04 am
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-2b941e3c1c973f1dc4c9.js   1.31 MiB  application  [emitted] [immutable]  application
+js/application-2b941e3c1c973f1dc4c9.js.map   1.45 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-2b941e3c1c973f1dc4c9.js js/application-2b941e3c1c973f1dc4c9.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 807 bytes {application} [built]
+[./app/javascript/stylesheets/application.scss] 664 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/stylesheets/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/stylesheets/application.scss 670 KiB {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 8 hidden modules
+
+Completed 200 OK in 5874ms (Views: 5873.0ms | ActiveRecord: 0.1ms | Allocations: 6474)
+
+
+Started GET "/articles" for ::1 at 2020-11-19 10:27:37 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1459)
+[Webpacker] Compiling...
+Started GET "/articles" for ::1 at 2020-11-19 10:27:38 +1300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1477)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/nalinaswani/Documents/GitHub/ruby_blog/public/packs
+[Webpacker] Hash: 8fd98ccc42ccc9aaab6c
+Version: webpack 4.44.2
+Time: 2976ms
+Built at: 19/11/2020 10:27:41 am
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-26ad0cba27e58dc9fa67.js   1.31 MiB  application  [emitted] [immutable]  application
+js/application-26ad0cba27e58dc9fa67.js.map   1.45 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-26ad0cba27e58dc9fa67.js js/application-26ad0cba27e58dc9fa67.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 807 bytes {application} [built]
+[./app/javascript/stylesheets/application.scss] 664 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/stylesheets/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/stylesheets/application.scss 670 KiB {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 8 hidden modules
+
+Completed 200 OK in 4567ms (Views: 4566.1ms | ActiveRecord: 0.2ms | Allocations: 13462)
+
+
+[Webpacker] Compiled all packs in /Users/nalinaswani/Documents/GitHub/ruby_blog/public/packs
+[Webpacker] Hash: 8fd98ccc42ccc9aaab6c
+Version: webpack 4.44.2
+Time: 2762ms
+Built at: 19/11/2020 10:27:42 am
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-26ad0cba27e58dc9fa67.js   1.31 MiB  application  [emitted] [immutable]  application
+js/application-26ad0cba27e58dc9fa67.js.map   1.45 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-26ad0cba27e58dc9fa67.js js/application-26ad0cba27e58dc9fa67.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 807 bytes {application} [built]
+[./app/javascript/stylesheets/application.scss] 664 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/stylesheets/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/stylesheets/application.scss 670 KiB {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 8 hidden modules
+
+Completed 200 OK in 4234ms (Views: 4233.3ms | ActiveRecord: 0.2ms | Allocations: 8293)
+
+
+Started GET "/articles" for ::1 at 2020-11-19 10:28:02 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1459)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/nalinaswani/Documents/GitHub/ruby_blog/public/packs
+[Webpacker] Hash: 1789499795bb64813c74
+Version: webpack 4.44.2
+Time: 2165ms
+Built at: 19/11/2020 10:28:06 am
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-b63c9038500666eb2045.js   1.31 MiB  application  [emitted] [immutable]  application
+js/application-b63c9038500666eb2045.js.map   1.45 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-b63c9038500666eb2045.js js/application-b63c9038500666eb2045.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 807 bytes {application} [built]
+[./app/javascript/stylesheets/application.scss] 664 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/stylesheets/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/stylesheets/application.scss 670 KiB {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 8 hidden modules
+
+Completed 200 OK in 3374ms (Views: 3373.3ms | ActiveRecord: 0.2ms | Allocations: 6465)
+
+
+Started GET "/articles" for ::1 at 2020-11-19 10:28:14 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1459)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/nalinaswani/Documents/GitHub/ruby_blog/public/packs
+[Webpacker] Hash: eba229a101b2cefb3f6a
+Version: webpack 4.44.2
+Time: 2324ms
+Built at: 19/11/2020 10:28:17 am
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-6129dd2cb23da9adbc4d.js   1.31 MiB  application  [emitted] [immutable]  application
+js/application-6129dd2cb23da9adbc4d.js.map   1.45 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-6129dd2cb23da9adbc4d.js js/application-6129dd2cb23da9adbc4d.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 807 bytes {application} [built]
+[./app/javascript/stylesheets/application.scss] 664 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/stylesheets/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/stylesheets/application.scss 670 KiB {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 8 hidden modules
+
+Completed 200 OK in 3501ms (Views: 3500.5ms | ActiveRecord: 0.1ms | Allocations: 6474)
+
+
+Started GET "/articles" for ::1 at 2020-11-19 10:28:35 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1459)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/nalinaswani/Documents/GitHub/ruby_blog/public/packs
+[Webpacker] Hash: ca57bb27d19a5a13df3e
+Version: webpack 4.44.2
+Time: 2342ms
+Built at: 19/11/2020 10:28:39 am
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-da3a9109a16d21903303.js   1.31 MiB  application  [emitted] [immutable]  application
+js/application-da3a9109a16d21903303.js.map   1.45 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-da3a9109a16d21903303.js js/application-da3a9109a16d21903303.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 807 bytes {application} [built]
+[./app/javascript/stylesheets/application.scss] 664 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/stylesheets/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/stylesheets/application.scss 670 KiB {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 8 hidden modules
+
+Completed 200 OK in 3678ms (Views: 3677.1ms | ActiveRecord: 0.2ms | Allocations: 6467)
+
+
+Started GET "/articles" for ::1 at 2020-11-19 10:29:30 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1459)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.1ms | Allocations: 5352)
+
+
+Started GET "/articles" for ::1 at 2020-11-19 10:29:32 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1459)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.1ms | Allocations: 5348)
+
+
+Started GET "/articles" for ::1 at 2020-11-19 10:29:32 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1459)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.1ms | Allocations: 5350)
+
+
+Started GET "/articles" for ::1 at 2020-11-19 10:29:47 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1459)
+[Webpacker] Compiling...
+Started GET "/articles" for ::1 at 2020-11-19 10:29:49 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1459)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/nalinaswani/Documents/GitHub/ruby_blog/public/packs
+[Webpacker] Hash: cec8c86c3deeab8193c4
+Version: webpack 4.44.2
+Time: 2198ms
+Built at: 19/11/2020 10:29:50 am
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-aac43eedeac4baf5efe8.js   1.31 MiB  application  [emitted] [immutable]  application
+js/application-aac43eedeac4baf5efe8.js.map   1.45 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-aac43eedeac4baf5efe8.js js/application-aac43eedeac4baf5efe8.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 807 bytes {application} [built]
+[./app/javascript/stylesheets/application.scss] 664 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/stylesheets/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/stylesheets/application.scss 670 KiB {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 8 hidden modules
+
+Completed 200 OK in 3382ms (Views: 3381.2ms | ActiveRecord: 0.3ms | Allocations: 12542)
+
+
+[Webpacker] Compiled all packs in /Users/nalinaswani/Documents/GitHub/ruby_blog/public/packs
+[Webpacker] Hash: cec8c86c3deeab8193c4
+Version: webpack 4.44.2
+Time: 2586ms
+Built at: 19/11/2020 10:29:53 am
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-aac43eedeac4baf5efe8.js   1.31 MiB  application  [emitted] [immutable]  application
+js/application-aac43eedeac4baf5efe8.js.map   1.45 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-aac43eedeac4baf5efe8.js js/application-aac43eedeac4baf5efe8.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 807 bytes {application} [built]
+[./app/javascript/stylesheets/application.scss] 664 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/stylesheets/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/stylesheets/application.scss 670 KiB {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 8 hidden modules
+
+Completed 200 OK in 4156ms (Views: 4154.8ms | ActiveRecord: 0.3ms | Allocations: 8235)
+
+
+Started GET "/articles/3/edit" for ::1 at 2020-11-19 11:16:21 +1300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:25:in `edit'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 4.4ms | Allocations: 729)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 4.9ms | Allocations: 811)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 29.6ms | ActiveRecord: 0.5ms | Allocations: 5220)
+
+
+Started PATCH "/articles/3" for ::1 at 2020-11-19 11:16:23 +1300
+Processing by ArticlesController#update as HTML
+  Parameters: {"authenticity_token"=>"gwYIqjuxWZ85Nmn2fxkJjTHAGuPCVe4SYQxLRNEMm8KtEz7y2JrXqHal6D8WvSAV4cb+zyId6d3i1tN+YhW6zQ==", "article"=>{"title"=>"Nalin ", "text"=>"dksjfklasdjfl"}, "commit"=>"Update Article", "id"=>"3"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:29:in `update'
+Redirected to http://localhost:3000/articles/3
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms | Allocations: 1173)
+
+
+Started GET "/articles/3" for ::1 at 2020-11-19 11:16:23 +1300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 211)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 0.1ms | Allocations: 4765)
+
+
+Started GET "/articles" for ::1 at 2020-11-19 11:16:24 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1477)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.9ms | Allocations: 5355)
+
+
+Started GET "/articles/1/edit" for ::1 at 2020-11-19 11:17:46 +1300
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:25:in `edit'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 2.1ms | Allocations: 729)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 2.3ms | Allocations: 810)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 18.4ms | ActiveRecord: 0.2ms | Allocations: 5203)
+
+
+Started PATCH "/articles/1" for ::1 at 2020-11-19 11:19:28 +1300
+Processing by ArticlesController#update as HTML
+  Parameters: {"authenticity_token"=>"RbX8PpSz0f2lG1i2/3xFEWn/mMW0M8RTE/BlmacNZwEvP8teiJKIiXUx78MmN5sYZSUFMlLQev/NCOm0EGCh0A==", "article"=>{"title"=>"Nalin ", "text"=>"dksjfklasdjflj"}, "commit"=>"Update Article", "id"=>"1"}
+  [1m[36mArticle Load (1.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:29:in `update'
+Redirected to http://localhost:3000/articles/1
+Completed 302 Found in 4ms (ActiveRecord: 1.4ms | Allocations: 1093)
+
+
+Started GET "/articles/1" for ::1 at 2020-11-19 11:19:28 +1300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 66)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.1ms | Allocations: 4485)
+
+
+Started GET "/articles" for ::1 at 2020-11-19 11:25:11 +1300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 14.0ms | Allocations: 4010)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 31.1ms | ActiveRecord: 0.2ms | Allocations: 8423)
+
+
+Started GET "/articles/3/edit" for ::1 at 2020-11-19 11:25:17 +1300
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:25:in `edit'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.7ms | Allocations: 779)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 2.2ms | Allocations: 861)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 9.3ms | ActiveRecord: 0.8ms | Allocations: 5379)
+
+
+Started PATCH "/articles/3" for ::1 at 2020-11-19 11:25:21 +1300
+Processing by ArticlesController#update as HTML
+  Parameters: {"authenticity_token"=>"pVHgBJPuTtIuEWNNri3lI81gJsJARpATLwddwJTgUoSLRNZccMXA5WGC4oTHicy7HWbC7qAOl9ys3cX6J/lziw==", "article"=>{"title"=>"Nalin ", "text"=>"dksjfklasdjfljnj"}, "commit"=>"Update Article", "id"=>"3"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:29:in `update'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 1760)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x00007f8bbfc0a1f0>
+Did you mean?  try):
+  
+app/controllers/articles_controller.rb:40:in `article_params'
+app/controllers/articles_controller.rb:31:in `update'
+Started PATCH "/articles/3" for ::1 at 2020-11-19 11:28:18 +1300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#update as HTML
+  Parameters: {"authenticity_token"=>"pVHgBJPuTtIuEWNNri3lI81gJsJARpATLwddwJTgUoSLRNZccMXA5WGC4oTHicy7HWbC7qAOl9ys3cX6J/lziw==", "article"=>{"title"=>"Nalin ", "text"=>"dksjfklasdjfljnj"}, "commit"=>"Update Article", "id"=>"3"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:29:in `update'
+Completed 500 Internal Server Error in 73073ms (ActiveRecord: 0.9ms | Allocations: 92158)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `article_params'
+app/controllers/articles_controller.rb:41:in `article_params'
+app/controllers/articles_controller.rb:31:in `update'
+Started PATCH "/articles/3" for ::1 at 2020-11-19 11:29:48 +1300
+Processing by ArticlesController#update as HTML
+  Parameters: {"authenticity_token"=>"pVHgBJPuTtIuEWNNri3lI81gJsJARpATLwddwJTgUoSLRNZccMXA5WGC4oTHicy7HWbC7qAOl9ys3cX6J/lziw==", "article"=>{"title"=>"Nalin ", "text"=>"dksjfklasdjfljnj"}, "commit"=>"Update Article", "id"=>"3"}
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:29:in `update'
+Completed 500 Internal Server Error in 8878ms (ActiveRecord: 1.0ms | Allocations: 338147)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `article_params'
+app/controllers/articles_controller.rb:41:in `article_params'
+app/controllers/articles_controller.rb:31:in `update'
+Started POST "/articles" for ::1 at 2020-11-19 11:31:39 +1300
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"7yaw6CLakifA6iF/BPSjrr/PXlX1onhw5x25OPAMd62GiRZZB7MdWRkw0AyOTPSanV6w5nf9BmJOu2ESRwwdag==", "article"=>{"title"=>"", "text"=>""}, "commit"=>"Create Article"}
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 72.5ms | Allocations: 703685)
+  Rendered articles/new.html.erb within layouts/application (Duration: 84.9ms | Allocations: 816899)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 485ms (Views: 265.8ms | ActiveRecord: 8.7ms | Allocations: 4591241)
+
+
+Started POST "/articles" for ::1 at 2020-11-19 12:52:27 +1300
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"jDgBsi6NaeLqobsgGEcC8lm1Afu94S2oI4NbbXu3ojfll6cDC+TmnDN7SlOS/1XGeyTvSD++U7qKJYNHzLfI8A==", "article"=>{"title"=>"Yehaw ", "text"=>"Cowboy "}, "commit"=>"Create Article"}
+  [1m[35m (0.9ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:17:in `create'
+  [1m[36mArticle Create (11.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Yehaw "], ["text", "Cowboy "], ["created_at", "2020-11-18 23:52:30.007807"], ["updated_at", "2020-11-18 23:52:30.007807"]]
+  ↳ app/controllers/articles_controller.rb:17:in `create'
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:17:in `create'
+Redirected to http://localhost:3000/articles/14
+Completed 302 Found in 258ms (ActiveRecord: 14.1ms | Allocations: 2129758)
+
+
+Started GET "/articles/14" for ::1 at 2020-11-19 12:52:30 +1300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mArticle Load (3.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 13.1ms | Allocations: 104183)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 223ms (Views: 175.1ms | ActiveRecord: 3.6ms | Allocations: 2144769)
+
+
+Started GET "/articles" for ::1 at 2020-11-19 12:52:43 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (3.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 147.3ms | Allocations: 1608056)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 258ms (Views: 233.3ms | ActiveRecord: 3.7ms | Allocations: 2702404)
+
+
+Started DELETE "/articles/1" for ::1 at 2020-11-19 12:52:47 +1300
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"aSHNZSWAXOhCR0Zuuid2Bu/XvjMlWiU1VCbuiqz4cx8AjmvUAOnTlpudtx0wnyEyzUZQgKcFWyf9gDagG/gZ2A==", "id"=>"1"}
+  [1m[36mArticle Load (3.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:39:in `destroy'
+  [1m[35m (0.8ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:40:in `destroy'
+  [1m[36mArticle Destroy (1.5ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/articles_controller.rb:40:in `destroy'
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:40:in `destroy'
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 115ms (ActiveRecord: 12.8ms | Allocations: 992045)
+
+
+Started GET "/articles" for ::1 at 2020-11-19 12:52:48 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (3.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 162.8ms | Allocations: 1536922)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 306ms (Views: 279.5ms | ActiveRecord: 3.7ms | Allocations: 2820138)
+
+
+Started DELETE "/articles/2" for ::1 at 2020-11-19 12:52:50 +1300
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"MyRgIab3+BHX5gSmnj2zzvy++uW0BRCpvQCEoiwU7Fpai8aQg553bw489dUUheT63i8UVjZabrsUplyImxSGnQ==", "id"=>"2"}
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:39:in `destroy'
+  [1m[35m (0.9ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:40:in `destroy'
+  [1m[36mArticle Destroy (1.8ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/articles_controller.rb:40:in `destroy'
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:40:in `destroy'
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 148ms (ActiveRecord: 12.3ms | Allocations: 1139918)
+
+
+Started GET "/articles" for ::1 at 2020-11-19 12:52:51 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (2.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 137.5ms | Allocations: 1397922)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 256ms (Views: 231.0ms | ActiveRecord: 2.9ms | Allocations: 2492701)
+
+
+Started DELETE "/articles/8" for ::1 at 2020-11-19 12:59:13 +1300
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Hy0WJxpk6Q0EvAsFE77PYUaagffqzheU/1QvDnIRo4d2grCWPw1mc91m+naZBphVZAtvRGiRaYZW8vckxRHJQA==", "id"=>"8"}
+  [1m[36mArticle Load (1.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:39:in `destroy'
+  [1m[35m (1.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:40:in `destroy'
+  [1m[36mArticle Destroy (1.6ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/articles_controller.rb:40:in `destroy'
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:40:in `destroy'
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 120ms (ActiveRecord: 12.4ms | Allocations: 994369)
+
+
+Started GET "/articles" for ::1 at 2020-11-19 12:59:13 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (4.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 134.5ms | Allocations: 1370502)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 313ms (Views: 288.2ms | ActiveRecord: 4.7ms | Allocations: 2723039)
+
+
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateComments (20201119000048)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "commenter" varchar, "body" text, "article_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_3bf61a60d3"
+FOREIGN KEY ("article_id")
+  REFERENCES "articles" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_article_id" ON "comments" ("article_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201119000048"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started PATCH "/articles/3" for ::1 at 2020-11-19 13:13:43 +1300
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#update as HTML
+  Parameters: {"authenticity_token"=>"pVHgBJPuTtIuEWNNri3lI81gJsJARpATLwddwJTgUoSLRNZccMXA5WGC4oTHicy7HWbC7qAOl9ys3cX6J/lziw==", "article"=>{"title"=>"Nalin ", "text"=>"dksjfklasdjfljnj"}, "commit"=>"Update Article", "id"=>"3"}
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:29:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:31:in `update'
+  [1m[36mArticle Update (0.7ms)[0m  [1m[33mUPDATE "articles" SET "text" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["text", "dksjfklasdjfljnj"], ["updated_at", "2020-11-19 00:13:43.692721"], ["id", 3]]
+  ↳ app/controllers/articles_controller.rb:31:in `update'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:31:in `update'
+Redirected to http://localhost:3000/articles/3
+Completed 302 Found in 36ms (ActiveRecord: 2.8ms | Allocations: 8620)
+
+
+Started GET "/articles/3" for ::1 at 2020-11-19 13:13:43 +1300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 10.5ms | Allocations: 334)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 52.1ms | ActiveRecord: 0.1ms | Allocations: 8949)
+
+
+Started GET "/articles" for ::1 at 2020-11-19 13:13:46 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 2100)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.2ms | Allocations: 6136)
+
+
+Started GET "/articles/3/edit" for ::1 at 2020-11-19 13:13:49 +1300
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:25:in `edit'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 13.9ms | Allocations: 2623)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 16.2ms | Allocations: 2952)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 26.8ms | ActiveRecord: 0.2ms | Allocations: 7510)
+
+
+Started GET "/articles" for ::1 at 2020-11-19 13:13:52 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1865)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 9.1ms | ActiveRecord: 0.1ms | Allocations: 5769)
+
+
+Started GET "/articles/9" for ::1 at 2020-11-19 13:13:57 +1300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 66)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.1ms | Allocations: 4469)
+
+
+Started GET "/articles" for ::1 at 2020-11-19 13:13:59 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1864)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.4ms | Allocations: 5763)
+
+
+Started GET "/articles/3" for ::1 at 2020-11-19 13:16:29 +1300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 76)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 8.5ms | ActiveRecord: 0.7ms | Allocations: 8454)
+
+
+Started GET "/articles" for ::1 at 2020-11-19 13:16:31 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1873)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.2ms | Allocations: 5764)
+
+
+Started GET "/articles" for ::1 at 2020-11-19 13:23:18 +1300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 22.8ms | Allocations: 5248)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 124ms (Views: 110.7ms | ActiveRecord: 1.2ms | Allocations: 27332)
+
+
+Started GET "/articles/12/edit" for ::1 at 2020-11-19 13:23:26 +1300
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:25:in `edit'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 27.3ms | Allocations: 2682)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 28.9ms | Allocations: 3013)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 50.5ms | ActiveRecord: 0.2ms | Allocations: 8045)
+
+
