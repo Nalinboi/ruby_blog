@@ -4,18 +4,16 @@ class User < ApplicationRecord
     validates :name, presence: true,
                       length: { minimum: 3 }
 
-    # name = "nalin aswani"
-    name.upcase!
-    
-    names_array = name.gsub(/\s+/m, ' ').strip.split(" ")
-    initials = ""
-    
-    names_array.each do |name|
-        initials += name[0]    
+    before_save :make_logo
+
+    def make_logo 
+        up_name = name.upcase
+            
+        names_array = up_name.gsub(/\s+/m, ' ').strip.split(" ")
+
+        self.letter = names_array.map { |n| n[0] }.join
     end
     
-    logo = initials
-    puts initials
     
 end
   
