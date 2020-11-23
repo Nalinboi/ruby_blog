@@ -11,7 +11,9 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  resources :users
+  resources :users do
+    resources :comments
+  end
 
 
   # root 'welcome#index' tells Rails to map requests to the root of the application to the 

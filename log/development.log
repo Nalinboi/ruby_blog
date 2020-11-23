@@ -5794,3 +5794,848 @@ Processing by ArticlesController#create as HTML
 Completed 200 OK in 24ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 6216)
 
 
+Started POST "/articles" for ::1 at 2020-11-23 14:33:47 +1300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"o+sGq+f4YmOp0LtXn0sIKf0rfEFeJz/Xiw7numYjjEfKRKAawpHtHXAKSiQV818d37qS8tx4QcUiqD+Q0SPmgA==", "article"=>{"title"=>"Spider man", "text"=>"Jamie fox was cool"}, "commit"=>"Create Article"}
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 10.3ms | Allocations: 831)
+  Rendered articles/new.html.erb within layouts/application (Duration: 11.7ms | Allocations: 912)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 44.0ms | ActiveRecord: 0.0ms | Allocations: 5656)
+
+
+Started GET "/articles" for ::1 at 2020-11-23 14:37:02 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1651)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.2ms | Allocations: 5589)
+
+
+Started GET "/articles/7" for ::1 at 2020-11-23 14:37:03 +1300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:9:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 7]]
+  ↳ app/views/articles/show.html.erb:12
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered comments/_form.html.erb (Duration: 27.0ms | Allocations: 6507)
+  Rendered articles/show.html.erb within layouts/application (Duration: 34.8ms | Allocations: 8525)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 42.4ms | ActiveRecord: 0.5ms | Allocations: 13164)
+
+
+Started POST "/articles/7/comments" for ::1 at 2020-11-23 14:37:13 +1300
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"QlZul9dyBU3a1Y3V4TFRG5x0ckty0ING83WZaAyViFyHEQMx5JhCNJQNZfMLhstTNq2qt7x2IXsvrjIRxyeJuQ==", "comment"=>{"commenter"=>"Nalin", "body"=>"This was a trash review"}, "commit"=>"Create Comment", "article_id"=>"7"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+Redirected to http://localhost:3000/articles/7
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms | Allocations: 2801)
+
+
+Started GET "/articles/7" for ::1 at 2020-11-23 14:37:13 +1300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:9:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 7]]
+  ↳ app/views/articles/show.html.erb:12
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered comments/_form.html.erb (Duration: 1.4ms | Allocations: 795)
+  Rendered articles/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1740)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.2ms | Allocations: 6196)
+
+
+Started GET "/articles/7" for ::1 at 2020-11-23 14:40:22 +1300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:9:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 7]]
+  ↳ app/views/articles/show.html.erb:12
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered comments/_form.html.erb (Duration: 7.7ms | Allocations: 4711)
+  Rendered articles/show.html.erb within layouts/application (Duration: 12.5ms | Allocations: 7230)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 25.0ms | ActiveRecord: 1.2ms | Allocations: 16292)
+
+
+Started POST "/articles/7/comments" for ::1 at 2020-11-23 14:40:33 +1300
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"rHL/fuIXNDZHKfRa5h/dgzRX7UAWs8L7Tmnck8I3siLF3VnPx367SJ7zBSlsp4q3FsYD85TsvOnnzwS5dTfY5Q==", "comment"=>{"commenter"=>"Nalin", "body"=>"This isnt even a review\r\n"}, "commit"=>"Create Comment", "article_id"=>"7"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms | Allocations: 1188)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article without an ID):
+  
+app/controllers/comments_controller.rb:5:in `create'
+Started POST "/articles/7/comments" for ::1 at 2020-11-23 14:41:07 +1300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"rHL/fuIXNDZHKfRa5h/dgzRX7UAWs8L7Tmnck8I3siLF3VnPx367SJ7zBSlsp4q3FsYD85TsvOnnzwS5dTfY5Q==", "comment"=>{"commenter"=>"Nalin", "body"=>"This isnt even a review\r\n"}, "commit"=>"Create Comment", "article_id"=>"7"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+Completed 404 Not Found in 14ms (ActiveRecord: 1.2ms | Allocations: 7316)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/comments_controller.rb:5:in `create'
+Started GET "/articles" for ::1 at 2020-11-23 14:41:49 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1655)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.2ms | Allocations: 5731)
+
+
+Started GET "/articles/new" for ::1 at 2020-11-23 14:41:57 +1300
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.2ms | Allocations: 737)
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 818)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 4768)
+
+
+Started POST "/articles" for ::1 at 2020-11-23 14:42:04 +1300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"sfhtQfQeNS00mFUJYqRoiCSwHNAZtXvrCLW8iqU3VgzYV8vw0Xe6U+1CpHroHD+8BiHyY5vqBfmhE2SgEjc8yw==", "article"=>{"title"=>"Nalina", "text"=>"Yes"}, "commit"=>"Create Article"}
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.5ms | Allocations: 831)
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 912)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 6187)
+
+
+Started GET "/articles" for ::1 at 2020-11-23 14:42:06 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1629)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.2ms | Allocations: 5580)
+
+
+Started GET "/articles/5" for ::1 at 2020-11-23 14:42:25 +1300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:9:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 5]]
+  ↳ app/views/articles/show.html.erb:12
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered comments/_form.html.erb (Duration: 7.6ms | Allocations: 4688)
+  Rendered articles/show.html.erb within layouts/application (Duration: 19.9ms | Allocations: 9129)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 24.6ms | ActiveRecord: 0.8ms | Allocations: 13495)
+
+
+Started POST "/articles/5/comments" for ::1 at 2020-11-23 14:42:30 +1300
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"9NKQfmbVWSFXLMp9Nu/Jqs9jABPiiIHAxH8jGghEyQ3O6ajlb1ZFgAN/3RoiwzOglczbVUUABhHF1+j0Urvq5Q==", "comment"=>{"commenter"=>"kj", "body"=>"jhgjhg"}, "commit"=>"Create Comment", "article_id"=>"5"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1198)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/comments_controller.rb:5:in `create'
+Started GET "/articles" for ::1 at 2020-11-23 14:42:35 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1626)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.2ms | Allocations: 5579)
+
+
+Started GET "/articles/new" for ::1 at 2020-11-23 14:44:02 +1300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.3ms | Allocations: 747)
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 829)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 11.4ms | ActiveRecord: 0.5ms | Allocations: 9257)
+
+
+Started POST "/articles" for ::1 at 2020-11-23 14:44:09 +1300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"nWz0YQrvd9vvPi60rZDZVOa9gV3EK63RWnvwru3qS7L0w1LQL4b4pTbk38cnKI5gxCxv7kZ008Pz3SiEWuohdQ==", "article"=>{"title"=>"Nalin ", "text"=>"This is good"}, "commit"=>"Create Article"}
+Completed 404 Not Found in 5ms (ActiveRecord: 0.6ms | Allocations: 2373)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/articles_controller.rb:18:in `create'
+Started POST "/articles" for ::1 at 2020-11-23 14:44:50 +1300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"nWz0YQrvd9vvPi60rZDZVOa9gV3EK63RWnvwru3qS7L0w1LQL4b4pTbk38cnKI5gxCxv7kZ008Pz3SiEWuohdQ==", "article"=>{"title"=>"Nalin ", "text"=>"This is good"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.4ms | Allocations: 844)
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 926)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 7.1ms | ActiveRecord: 1.1ms | Allocations: 15309)
+
+
+Started POST "/articles" for ::1 at 2020-11-23 14:44:52 +1300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"3cACQQ3kRQ2EJSYg8RstE/1csSDjeQJ4BIOAzQjISxy0b6TwKI3Kc13/11N7o3on381fk2EmfGqtJVjnv8gh2w==", "article"=>{"title"=>"Nalin ", "text"=>"This is good"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.3ms | Allocations: 831)
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 912)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 7.7ms | ActiveRecord: 0.2ms | Allocations: 6315)
+
+
+Started POST "/articles" for ::1 at 2020-11-23 14:44:53 +1300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"wEl1tbORTdeOHnH0f3PU8OSI9QoPpEWrI/7q/j1alhKp5tMElvjCqVfEgIf1y4PExhkbuY37O7mKWDLUilr81Q==", "article"=>{"title"=>"Nalin ", "text"=>"This is good"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.4ms | Allocations: 831)
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 912)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.1ms | Allocations: 6313)
+
+
+Started GET "/articles" for ::1 at 2020-11-23 14:46:59 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1659)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.3ms | Allocations: 5626)
+
+
+Started GET "/articles/6" for ::1 at 2020-11-23 14:47:01 +1300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:9:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 6]]
+  ↳ app/views/articles/show.html.erb:12
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered comments/_form.html.erb (Duration: 7.5ms | Allocations: 4656)
+  Rendered articles/show.html.erb within layouts/application (Duration: 25.6ms | Allocations: 9094)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 33.4ms | ActiveRecord: 0.8ms | Allocations: 13576)
+
+
+Started POST "/articles/6/comments" for ::1 at 2020-11-23 14:47:06 +1300
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"hm/fW6GhF/X6iMKq9vqnzoEKj6cROGcb1aFj6bvh/i25SwA+kTUQu4YuFJ/Qp39D/xe4uewWTRua4ipbTpuACw==", "comment"=>{"commenter"=>"baf", "body"=>"bad"}, "commit"=>"Create Comment", "article_id"=>"6"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms | Allocations: 1160)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/comments_controller.rb:5:in `create'
+Started POST "/articles/6/comments" for ::1 at 2020-11-23 14:48:25 +1300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"jTKXaYmpAy9fQeHGnpTkgjqfTBIIzm5WXcfI6cK401LknTHYrMCMUYabELUULLO2GA6ioYqREET0YRDDdbi5lQ==", "comment"=>{"commenter"=>"baf", "body"=>"bad"}, "commit"=>"Create Comment", "article_id"=>"6"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+Redirected to http://localhost:3000/articles/6
+Completed 302 Found in 24ms (ActiveRecord: 1.0ms | Allocations: 13377)
+
+
+Started GET "/articles/6" for ::1 at 2020-11-23 14:48:25 +1300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:9:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 6]]
+  ↳ app/views/articles/show.html.erb:12
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered comments/_form.html.erb (Duration: 2.6ms | Allocations: 857)
+  Rendered articles/show.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1990)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 29.4ms | ActiveRecord: 0.3ms | Allocations: 6575)
+
+
+Started GET "/articles" for ::1 at 2020-11-23 14:48:49 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 1646)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.4ms | Allocations: 5581)
+
+
+Started GET "/article/new" for ::1 at 2020-11-23 14:48:52 +1300
+  
+ActionController::RoutingError (No route matches [GET] "/article/new"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/articles/new" for ::1 at 2020-11-23 14:49:04 +1300
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.0ms | Allocations: 687)
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 768)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 4724)
+
+
+Started POST "/articles" for ::1 at 2020-11-23 14:49:12 +1300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"Du/7QAQU5Q6wAKjspOcj8KgBBaqJqUkyPSsjfS1RzBRnQF3xIX1qcGnaWZ8uX3TEipDrGQv2NyCUjftXmlGm0w==", "article"=>{"title"=>"Hello", "text"=>"Yes nalin"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.3ms | Allocations: 832)
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 913)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 7.6ms | ActiveRecord: 0.7ms | Allocations: 9534)
+
+
+Started POST "/articles" for ::1 at 2020-11-23 14:56:41 +1300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"+uAdk35iqRAHaNcoTejnZb5kiezismK9Ons4P1jkW6KTT7siWwsmbt6yJlvHULBRnPVnX2DtHK+T3eAV7+QxZQ==", "article"=>{"title"=>"Hello", "text"=>"Yes nalin"}, "commit"=>"Create Article"}
+Completed 404 Not Found in 5ms (ActiveRecord: 0.0ms | Allocations: 2307)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/articles_controller.rb:29:in `create'
+Started POST "/articles" for ::1 at 2020-11-23 15:09:53 +1300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"+uAdk35iqRAHaNcoTejnZb5kiezismK9Ons4P1jkW6KTT7siWwsmbt6yJlvHULBRnPVnX2DtHK+T3eAV7+QxZQ==", "article"=>{"title"=>"Hello", "text"=>"Yes nalin"}, "commit"=>"Create Article"}
+Completed 404 Not Found in 7ms (ActiveRecord: 0.0ms | Allocations: 2307)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/articles_controller.rb:29:in `create'
+Started GET "/articles" for ::1 at 2020-11-23 15:09:55 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 4455)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 0.4ms | Allocations: 9505)
+
+
+Started GET "/articles/new" for ::1 at 2020-11-23 15:09:58 +1300
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 2.4ms | Allocations: 737)
+  Rendered articles/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 818)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms | Allocations: 4752)
+
+
+Started POST "/articles" for ::1 at 2020-11-23 15:10:09 +1300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"P1ExJerYRHnG58EfCUAYCIeoT4k5Sa0eu/EjskdViXVW/peUz7HLBx89MGyD+E88pTmhOrsW0wwSV/uY8FXjsg==", "article"=>{"title"=>"Django", "text"=>"Good`\r\n"}, "commit"=>"Create Article"}
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 655)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/articles_controller.rb:29:in `create'
+Started POST "/articles" for ::1 at 2020-11-23 15:10:31 +1300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"P1ExJerYRHnG58EfCUAYCIeoT4k5Sa0eu/EjskdViXVW/peUz7HLBx89MGyD+E88pTmhOrsW0wwSV/uY8FXjsg==", "article"=>{"title"=>"Django", "text"=>"Good`\r\n"}, "commit"=>"Create Article"}
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.3ms | Allocations: 843)
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 925)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 6.8ms | ActiveRecord: 0.5ms | Allocations: 11989)
+
+
+Started POST "/articles" for ::1 at 2020-11-23 15:11:02 +1300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"MpIXFTZG/bsVNPXt8h1FS9Yemnd4waxNA7DtdXDpoGFbPbGkEy9yxczuBJ54pRJ/9I90xPqe0l+qFjVfx+nKpg==", "article"=>{"title"=>"Django", "text"=>"Good`\r\n"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.3ms | Allocations: 843)
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 925)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 6.8ms | ActiveRecord: 1.4ms | Allocations: 15231)
+
+
+Started GET "/articles" for ::1 at 2020-11-23 15:11:04 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1659)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.2ms | Allocations: 5614)
+
+
+Started GET "/articles/new" for ::1 at 2020-11-23 15:11:08 +1300
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.4ms | Allocations: 684)
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 765)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 4706)
+
+
+Started POST "/articles" for ::1 at 2020-11-23 15:11:13 +1300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"Juqw6FxGGudiLo3S134P9qxPsTvUB/LhSXa5lXq6izZPRRZZeS+Vmbv0fKFdxljCjt5fiFZYjPPg0GG/zbrh8Q==", "article"=>{"title"=>"MMMM", "text"=>"jdfjksf"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.5ms | Allocations: 963)
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1044)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.1ms | Allocations: 6732)
+
+
+Started POST "/articles" for ::1 at 2020-11-23 15:11:19 +1300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"jPwgMKI9J78qGB8V6B8baZQX0njqGLx88Ma/8t+LvRLlU4aBh1SowfPC7mZip0xdtoY8y2hHwm5ZYGfYaIvX1Q==", "article"=>{"title"=>"MMMMd", "text"=>"jdfjksf"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.4ms | Allocations: 829)
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 910)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.2ms | ActiveRecord: 0.1ms | Allocations: 6311)
+
+
+Started GET "/articles" for ::1 at 2020-11-23 15:14:17 +1300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 5001)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 12.7ms | ActiveRecord: 0.8ms | Allocations: 10135)
+
+
+Started GET "/articles/new" for ::1 at 2020-11-23 15:14:21 +1300
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.4ms | Allocations: 737)
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 818)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 4765)
+
+
+Started GET "/articles/new" for ::1 at 2020-11-23 16:34:00 +1300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 3.7ms | Allocations: 747)
+  Rendered articles/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 829)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 22.5ms | ActiveRecord: 0.0ms | Allocations: 8919)
+
+
+Started POST "/articles" for ::1 at 2020-11-23 16:34:07 +1300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"TgpGx8oyb0rSsgl0DybUHSbOzpSrIJVO4xZ3Q6V1hOEnpeB271vgNAto+AeFnoMpBF8gJyl/61xKsK9pEnXuJg==", "article"=>{"title"=>"Nalin ", "text"=>"kjmlkmklm"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.6ms | Allocations: 7230)
+
+
+  
+NoMethodError (undefined method `articles' for #<User:0x00007fa04a3d5738>
+Did you mean?  article
+               article=):
+  
+app/controllers/articles_controller.rb:20:in `create'
+Started POST "/articles" for ::1 at 2020-11-23 16:39:56 +1300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"TgpGx8oyb0rSsgl0DybUHSbOzpSrIJVO4xZ3Q6V1hOEnpeB271vgNAto+AeFnoMpBF8gJyl/61xKsK9pEnXuJg==", "article"=>{"title"=>"Nalin ", "text"=>"kjmlkmklm"}, "commit"=>"Create Article"}
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.3ms | Allocations: 843)
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 925)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 13.0ms | ActiveRecord: 0.0ms | Allocations: 11679)
+
+
+Started GET "/articles" for ::1 at 2020-11-23 16:43:16 +1300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 10.3ms | Allocations: 4985)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 21.7ms | ActiveRecord: 0.7ms | Allocations: 10116)
+
+
+Started GET "/articles/new" for ::1 at 2020-11-23 16:43:22 +1300
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 6.5ms | Allocations: 737)
+  Rendered articles/new.html.erb within layouts/application (Duration: 7.7ms | Allocations: 818)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 42.2ms | ActiveRecord: 0.0ms | Allocations: 4752)
+
+
+Started POST "/articles" for ::1 at 2020-11-23 16:43:27 +1300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"FjWNZoteblmKgMKtPYiZwNCwkIniT1IHjiQVpObd1Rp/mivXrjfhJ1NaM963MM708iF+OmAQLBUngs2OUd2/3Q==", "article"=>{"title"=>"common", "text"=>"lets do this"}, "commit"=>"Create Article"}
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 2.1ms | Allocations: 832)
+  Rendered articles/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 913)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 7414)
+
+
+Started POST "/articles" for ::1 at 2020-11-23 16:43:35 +1300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"T/ofyWcJes0lugxU/P9ZWOji1WUUdKe84z7/PyXgs8QmVbl4QmD1s/xg/Sd2Rw5synM71pYr2a5KmCcVkuDZAw==", "article"=>{"title"=>"common", "text"=>"lets do this"}, "commit"=>"Create Article"}
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.3ms | Allocations: 830)
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 911)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 5651)
+
+
+Started POST "/articles" for ::1 at 2020-11-23 16:45:22 +1300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"Uj36oMZdV9lglq+VBIYpQU2esk5pO9oYwpw7RAm2EmQ7klwR4zTYp7lMXuaOPn51bw9c/etkpAprOuNuvrZ4ow==", "article"=>{"title"=>"common", "text"=>"lets do this"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.9ms | Allocations: 11606)
+
+
+  
+NoMethodError (undefined method `articles' for #<User:0x00007fa0480462b8>
+Did you mean?  article
+               article=):
+  
+app/controllers/articles_controller.rb:19:in `create'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUserIdToArticle (20201123035106)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "articles" ADD "user_id" integer[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started POST "/articles" for ::1 at 2020-11-23 16:54:04 +1300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.3.4) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.4) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/articles" for ::1 at 2020-11-23 16:55:07 +1300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"Uj36oMZdV9lglq+VBIYpQU2esk5pO9oYwpw7RAm2EmQ7klwR4zTYp7lMXuaOPn51bw9c/etkpAprOuNuvrZ4ow==", "article"=>{"title"=>"common", "text"=>"lets do this"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms | Allocations: 3399)
+
+
+  
+NoMethodError (undefined method `articles' for #<User:0x00007fa04a595d70>
+Did you mean?  article
+               article=):
+  
+app/controllers/articles_controller.rb:19:in `create'
+Started POST "/articles" for ::1 at 2020-11-23 16:55:23 +1300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"Uj36oMZdV9lglq+VBIYpQU2esk5pO9oYwpw7RAm2EmQ7klwR4zTYp7lMXuaOPn51bw9c/etkpAprOuNuvrZ4ow==", "article"=>{"title"=>"common", "text"=>"lets do this"}, "commit"=>"Create Article"}
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.3ms | Allocations: 843)
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 925)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 12.8ms | ActiveRecord: 0.5ms | Allocations: 11981)
+
+
+Started POST "/articles" for ::1 at 2020-11-23 17:02:34 +1300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"IQIigvefWhMpq2nNWq+2zyvwn3W86J1K7deR/67+f6tIrYQz0vbVbfBxmL7QF+H7CWFxxj6341hEcUnVGf4VbA==", "article"=>{"title"=>"common", "text"=>"lets do this"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:20:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:20:in `create'
+  [1m[36mArticle Create (1.9ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "common"], ["text", "lets do this"], ["created_at", "2020-11-23 04:02:34.810717"], ["updated_at", "2020-11-23 04:02:34.810717"], ["user_id", 1]]
+  ↳ app/controllers/articles_controller.rb:20:in `create'
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:20:in `create'
+Redirected to http://localhost:3000/articles/15
+Completed 302 Found in 36ms (ActiveRecord: 5.1ms | Allocations: 13387)
+
+
+Started GET "/articles/15" for ::1 at 2020-11-23 17:02:34 +1300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:9:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 15]]
+  ↳ app/views/articles/show.html.erb:12
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered comments/_form.html.erb (Duration: 7.2ms | Allocations: 4663)
+  Rendered articles/show.html.erb within layouts/application (Duration: 12.3ms | Allocations: 7227)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 23.7ms | ActiveRecord: 0.8ms | Allocations: 11896)
+
+
+Started POST "/articles/15/comments" for ::1 at 2020-11-23 17:02:49 +1300
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"Wn+GLGt+ya85j2JL7FnaUkOx3d+/PUgj5SNoMr6lIH0z0CCdThdG0eBVkzhm4Y1mYSAzbD1iNjFMhbAYCaVKug==", "comment"=>{"commenter"=>"Nalin", "body"=>"This was a bad review"}, "commit"=>"Create Comment", "article_id"=>"15"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+Redirected to http://localhost:3000/articles/15
+Completed 302 Found in 5ms (ActiveRecord: 0.1ms | Allocations: 2771)
+
+
+Started GET "/articles/15" for ::1 at 2020-11-23 17:02:49 +1300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:9:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 15]]
+  ↳ app/views/articles/show.html.erb:12
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered comments/_form.html.erb (Duration: 1.5ms | Allocations: 796)
+  Rendered articles/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1741)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.2ms | Allocations: 6210)
+
+
+Started GET "/articles/15" for ::1 at 2020-11-23 17:03:32 +1300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:9:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 15]]
+  ↳ app/views/articles/show.html.erb:12
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered comments/_form.html.erb (Duration: 7.3ms | Allocations: 4711)
+  Rendered articles/show.html.erb within layouts/application (Duration: 12.4ms | Allocations: 7231)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 23.7ms | ActiveRecord: 1.4ms | Allocations: 16313)
+
+
+Started POST "/articles/15/comments" for ::1 at 2020-11-23 17:03:38 +1300
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"g0H0nSYQ+1Y8uz/LbzKS5LdexSlRz9+tPfvR+2MMqq/q7lIsA3l0KOVhzrjlisXQlc8rmtOQob+UXQnR1AzAaA==", "comment"=>{"commenter"=>"Nalin ", "body"=>"Bad review"}, "commit"=>"Create Comment", "article_id"=>"15"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Redirected to http://localhost:3000/articles/15
+Completed 302 Found in 13ms (ActiveRecord: 0.7ms | Allocations: 7321)
+
+
+Started GET "/articles/15" for ::1 at 2020-11-23 17:03:38 +1300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:9:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 15]]
+  ↳ app/views/articles/show.html.erb:12
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered comments/_form.html.erb (Duration: 1.3ms | Allocations: 796)
+  Rendered articles/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1741)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.2ms | Allocations: 6210)
+
+
+Started GET "/articles" for ::1 at 2020-11-23 17:03:45 +1300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1759)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.3ms | Allocations: 5706)
+
+
+Started GET "/articles/new" for ::1 at 2020-11-23 17:03:50 +1300
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 2.2ms | Allocations: 687)
+  Rendered articles/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 768)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 4696)
+
+
+Started POST "/articles" for ::1 at 2020-11-23 17:03:55 +1300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"5PN9DUE0lPPYkYWpzxxNlfF7NG1TZ7caY5rDv3IMCYGNXNu8ZF0bjQFLdNpFpBqh0+ra3tE4yQjKPBuVxQxjRg==", "article"=>{"title"=>"Hello", "text"=>"Trying"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:20:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:20:in `create'
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Hello"], ["text", "Trying"], ["created_at", "2020-11-23 04:03:55.841112"], ["updated_at", "2020-11-23 04:03:55.841112"], ["user_id", 1]]
+  ↳ app/controllers/articles_controller.rb:20:in `create'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:20:in `create'
+Redirected to http://localhost:3000/articles/16
+Completed 302 Found in 10ms (ActiveRecord: 1.9ms | Allocations: 5441)
+
+
+Started GET "/articles/16" for ::1 at 2020-11-23 17:03:55 +1300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:9:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 16]]
+  ↳ app/views/articles/show.html.erb:12
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered comments/_form.html.erb (Duration: 1.2ms | Allocations: 796)
+  Rendered articles/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1741)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.2ms | Allocations: 6202)
+
+
+Started POST "/articles/16/comments" for ::1 at 2020-11-23 17:04:00 +1300
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"SWtLT3OwIqTXI07rXonVIeHcn7/j6R35Y19a+wzuGd8gxO3+Vtmt2g75v5jUMYIVw01xDGG2Y+vK+YLRu+5zGA==", "comment"=>{"commenter"=>"Nalin", "body"=>"grr"}, "commit"=>"Create Comment", "article_id"=>"16"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Redirected to http://localhost:3000/articles/16
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms | Allocations: 2887)
+
+
+Started GET "/articles/16" for ::1 at 2020-11-23 17:04:00 +1300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:9:in `show'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 16]]
+  ↳ app/views/articles/show.html.erb:12
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered comments/_form.html.erb (Duration: 1.5ms | Allocations: 796)
+  Rendered articles/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1741)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.2ms | Allocations: 6204)
+
+
