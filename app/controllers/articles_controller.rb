@@ -1,6 +1,19 @@
 class ArticlesController < ApplicationController
-  # http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
 
+    def article_author(art, id=true)
+      if art.user_id.present? # Finding the user from the article given
+        if id  # If we want the id then return the id
+          art.user_id  # If there is a user id then give that 
+        else  # if we want the user then we just return the user
+          art.user.name
+        end
+      else 
+        "N/A"  # If there is no user id then give "N/A" 
+      end
+    end
+    helper_method :article_author
+
+ 
     def index 
         @articles = Article.all
     end
