@@ -7,9 +7,9 @@ class User < ApplicationRecord
     before_save :make_logo
 
     def make_logo 
-        up_name = name.upcase
+        self.name = name.titleize
             
-        names_array = up_name.gsub(/\s+/m, ' ').strip.split(" ")
+        names_array = name.gsub(/\s+/m, ' ').strip.split(" ")
 
         self.letter = names_array.map { |n| n[0] }.join
     end

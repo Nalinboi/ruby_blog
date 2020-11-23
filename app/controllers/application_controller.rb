@@ -1,3 +1,7 @@
 class ApplicationController < ActionController::Base
-    current_user = User.first
+    # Need a way to find out how to do this without hard coding the first user
+    
+    def current_user
+        User.first  
+    end
 end

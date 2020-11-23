@@ -7,10 +7,11 @@ Rails.application.routes.draw do
   # Rails provides a resources method which can be used to declare a standard REST resource. 
   # You need to add the article resource to the config/routes.rb so the file will look as follows:
   # resources :articles
-
   resources :articles do
     resources :comments
   end
+
+  resources :users
 
 
   # root 'welcome#index' tells Rails to map requests to the root of the application to the 
