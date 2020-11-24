@@ -2,15 +2,7 @@ class CommentsController < ApplicationController
   # http_basic_authenticate_with name: "dhh", password: "secret", only: :destroy    
   def create
     @article = Article.find(params[:article_id])
-
-    # comment_params.merge!(user_id: current_user.id)
-
-
-    @comment = @article.comments.create(comment_params)
-    @comment.user_id = current_user.id
-    @comment.save
-     
-    
+    @comment = @article.comments.create(comment_params) 
     redirect_to article_path(@article)
   end
 
@@ -23,6 +15,9 @@ class CommentsController < ApplicationController
  
   private
     def comment_params
-      params.require(:comment).permit(:body)  # we want to merge the user_id into params
+      params.require(:comment)
+            .permit(:body)  # we want to merge the user_id into params
+            .merge(user_id: current_user.id)
+
     end
 end
