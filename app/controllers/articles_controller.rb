@@ -9,6 +9,7 @@ class ArticlesController < ApplicationController
     end
 
     def new
+        @current_user = current_user
         @article = Article.new
     end
 

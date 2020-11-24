@@ -5,7 +5,8 @@ class Comment < ApplicationRecord
   # validates :body, presence: true,
   #                     length: { minimum: 3 }                      
 
-  def author(return_id: false)
+  # we use this instead of comment.user.name because this can return N/A
+  def author(return_id: false)  
     return "N/A" unless user_id.present?
     return_id ? user_id : user.name
   end

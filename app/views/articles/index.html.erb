@@ -1,6 +1,7 @@
 <h1>Listing Articles</h1>
+<h2><%= link_to 'Create New Article', new_article_url %></h2>
  
-<table>
+<table style="width: 100%">
   <tr>
     <th>Article ID</th>
     <th>Title</th>
@@ -22,8 +23,17 @@
       <td><%= link_to 'Destroy', article_path(article),
             method: :delete,
             data: { confirm: 'Are you sure?' } %></td>
-    </tr>
+    
   <% end %>
+  </tr>
+      <tr>
+      <th>Article ID</th>
+      <th>Title</th>
+      <th>Text</th>
+      <th>Author ID</th>
+      <th>Author</th>
+      <th></th>
+    </tr>
 </table>
 <%= link_to 'Back', welcome_index_url %>
 
