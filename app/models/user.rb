@@ -8,9 +8,7 @@ class User < ApplicationRecord
 
     def make_logo 
         self.name = name.titleize
-            
         names_array = name.gsub(/\s+/m, ' ').strip.split(" ")
-
         self.letter = names_array.map { |n| n[0] }.join
     end
     
